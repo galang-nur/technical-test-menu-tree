@@ -50,6 +50,7 @@ cd menu-tree-system
 ```
 
 ### 2. Backend Setup
+```bash
 cd menu-tree-backend
 npm install
 cp .env.example .env
@@ -58,13 +59,15 @@ npm run prisma:generate
 npm run prisma:migrate
 npm run prisma:seed
 npm run start:dev
+```
 
 ### 3. Frontend setup
+```bash
 cd menu-tree-frontend
 npm install
 cp .env.example .env.local
 npm run dev
-
+```
 📚 Documentation
 
 For detailed instructions and features, please check readme.md inside of respective folders.
