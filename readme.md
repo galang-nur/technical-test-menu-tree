@@ -28,15 +28,6 @@ This project consists of two parts:
 
 ---
 
-## 📂 Project Structure
-
-menu-tree-system/
-
-├── menu-tree-frontend/ # Next.js 15 App Router frontend
-├── menu-tree-backend/ # NestJS + Prisma backend
-└── README.md # This file
-
-
 Each part has its own **README.md** for detailed setup and features.
 
 ---
