@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Menu {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  icon        String?
+  url         String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  
+  // Self-referential relationship for hierarchical structure
+  parentId    String?
+  parent      Menu?    @relation("MenuHierarchy", fields: [parentId], references: [id])
+  children    Menu[]   @relation("MenuHierarchy")
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("menus")
+}
