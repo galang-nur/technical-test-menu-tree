@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "450758b5-c688-4f4c-8719-74b6e756d83e",
+		"name": "technical-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13505925"
+	},
+	"item": [
+		{
+			"name": "Create Menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Products\",\r\n    \"description\": \"Product management\",\r\n    \"icon\": \"package\",\r\n    \"url\": \"/products\",\r\n    \"order\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/menus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"menus"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Products\",\r\n    \"description\": \"Product management\",\r\n    \"icon\": \"package\",\r\n    \"url\": \"/products\",\r\n    \"order\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/menus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"menus"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "256"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"100-68+QHLcu0NdDqYeurHGqTslN5TI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Sep 2025 02:00:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"cmfork3vm0000u8vk3ftivjjs\",\n    \"name\": \"Products\",\n    \"description\": \"Product management\",\n    \"icon\": \"package\",\n    \"url\": \"/products\",\n    \"order\": 1,\n    \"isActive\": true,\n    \"parentId\": null,\n    \"children\": [],\n    \"createdAt\": \"2025-09-18T02:00:21.153Z\",\n    \"updatedAt\": \"2025-09-18T02:00:21.153Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/menus/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"menus",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/menus/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"menus",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "6468"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1944-oeRwgcrBDdnCCHHZ4n4cpQMB18c\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Sep 2025 02:03:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"cmfor5r010000u8488io43320\",\n        \"name\": \"Dashboard\",\n        \"description\": \"Main dashboard page\",\n        \"icon\": \"dashboard\",\n        \"url\": \"/dashboard\",\n        \"order\": 1,\n        \"isActive\": true,\n        \"parentId\": null,\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.282Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.282Z\"\n    },\n    {\n        \"id\": \"cmfor5r3z0005u8484qmd7pu8\",\n        \"name\": \"All Users\",\n        \"description\": \"View all users\",\n        \"icon\": \"user-list\",\n        \"url\": \"/users/all\",\n        \"order\": 1,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r1m0001u848dr52mcvu\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.423Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.423Z\"\n    },\n    {\n        \"id\": \"cmfor5r5c000bu84808oqlygw\",\n        \"name\": \"General Settings\",\n        \"description\": \"General application settings\",\n        \"icon\": \"cog\",\n        \"url\": \"/settings/general\",\n        \"order\": 1,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r2j0002u848xjja0gvp\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.473Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.473Z\"\n    },\n    {\n        \"id\": \"cmfor5r6b000hu848zkldyn7i\",\n        \"name\": \"User Analytics\",\n        \"description\": \"User activity reports\",\n        \"icon\": \"bar-chart\",\n        \"url\": \"/reports/users\",\n        \"order\": 1,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r380003u848zxopqhro\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.507Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.507Z\"\n    },\n    {\n        \"id\": \"cmfork3vm0000u8vk3ftivjjs\",\n        \"name\": \"Products\",\n        \"description\": \"Product management\",\n        \"icon\": \"package\",\n        \"url\": \"/products\",\n        \"order\": 1,\n        \"isActive\": true,\n        \"parentId\": null,\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T02:00:21.153Z\",\n        \"updatedAt\": \"2025-09-18T02:00:21.153Z\"\n    },\n    {\n        \"id\": \"cmfor5r1m0001u848dr52mcvu\",\n        \"name\": \"User Management\",\n        \"description\": \"User and role management\",\n        \"icon\": \"users\",\n        \"url\": \"/users\",\n        \"order\": 2,\n        \"isActive\": true,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"cmfor5r3z0005u8484qmd7pu8\",\n                \"name\": \"All Users\",\n                \"description\": \"View all users\",\n                \"icon\": \"user-list\",\n                \"url\": \"/users/all\",\n                \"order\": 1,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r1m0001u848dr52mcvu\",\n                \"createdAt\": \"2025-09-18T01:49:11.423Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.423Z\"\n            },\n            {\n                \"id\": \"cmfor5r4u0007u848qntpb5v5\",\n                \"name\": \"Add User\",\n                \"description\": \"Create new user\",\n                \"icon\": \"user-plus\",\n                \"url\": \"/users/add\",\n                \"order\": 2,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r1m0001u848dr52mcvu\",\n                \"createdAt\": \"2025-09-18T01:49:11.454Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.454Z\"\n            },\n            {\n                \"id\": \"cmfor5r570009u848vxuj9xxv\",\n                \"name\": \"Roles & Permissions\",\n                \"description\": \"Manage user roles\",\n                \"icon\": \"shield\",\n                \"url\": \"/users/roles\",\n                \"order\": 3,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r1m0001u848dr52mcvu\",\n                \"createdAt\": \"2025-09-18T01:49:11.468Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.468Z\"\n            }\n        ],\n        \"createdAt\": \"2025-09-18T01:49:11.338Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.338Z\"\n    },\n    {\n        \"id\": \"cmfor5r4u0007u848qntpb5v5\",\n        \"name\": \"Add User\",\n        \"description\": \"Create new user\",\n        \"icon\": \"user-plus\",\n        \"url\": \"/users/add\",\n        \"order\": 2,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r1m0001u848dr52mcvu\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.454Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.454Z\"\n    },\n    {\n        \"id\": \"cmfor5r5q000du848zwvjatvh\",\n        \"name\": \"Security\",\n        \"description\": \"Security settings\",\n        \"icon\": \"lock\",\n        \"url\": \"/settings/security\",\n        \"order\": 2,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r2j0002u848xjja0gvp\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.486Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.486Z\"\n    },\n    {\n        \"id\": \"cmfor5r6o000ju848qztjtqrd\",\n        \"name\": \"System Performance\",\n        \"description\": \"System performance metrics\",\n        \"icon\": \"activity\",\n        \"url\": \"/reports/performance\",\n        \"order\": 2,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r380003u848zxopqhro\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.521Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.521Z\"\n    },\n    {\n        \"id\": \"cmfor5r2j0002u848xjja0gvp\",\n        \"name\": \"Settings\",\n        \"description\": \"Application settings\",\n        \"icon\": \"settings\",\n        \"url\": \"/settings\",\n        \"order\": 3,\n        \"isActive\": true,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"cmfor5r5c000bu84808oqlygw\",\n                \"name\": \"General Settings\",\n                \"description\": \"General application settings\",\n                \"icon\": \"cog\",\n                \"url\": \"/settings/general\",\n                \"order\": 1,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r2j0002u848xjja0gvp\",\n                \"createdAt\": \"2025-09-18T01:49:11.473Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.473Z\"\n            },\n            {\n                \"id\": \"cmfor5r5q000du848zwvjatvh\",\n                \"name\": \"Security\",\n                \"description\": \"Security settings\",\n                \"icon\": \"lock\",\n                \"url\": \"/settings/security\",\n                \"order\": 2,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r2j0002u848xjja0gvp\",\n                \"createdAt\": \"2025-09-18T01:49:11.486Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.486Z\"\n            },\n            {\n                \"id\": \"cmfor5r63000fu848t2hay3lb\",\n                \"name\": \"Integrations\",\n                \"description\": \"Third-party integrations\",\n                \"icon\": \"plug\",\n                \"url\": \"/settings/integrations\",\n                \"order\": 3,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r2j0002u848xjja0gvp\",\n                \"createdAt\": \"2025-09-18T01:49:11.500Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.500Z\"\n            }\n        ],\n        \"createdAt\": \"2025-09-18T01:49:11.372Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.372Z\"\n    },\n    {\n        \"id\": \"cmfor5r570009u848vxuj9xxv\",\n        \"name\": \"Roles & Permissions\",\n        \"description\": \"Manage user roles\",\n        \"icon\": \"shield\",\n        \"url\": \"/users/roles\",\n        \"order\": 3,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r1m0001u848dr52mcvu\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.468Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.468Z\"\n    },\n    {\n        \"id\": \"cmfor5r63000fu848t2hay3lb\",\n        \"name\": \"Integrations\",\n        \"description\": \"Third-party integrations\",\n        \"icon\": \"plug\",\n        \"url\": \"/settings/integrations\",\n        \"order\": 3,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r2j0002u848xjja0gvp\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.500Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.500Z\"\n    },\n    {\n        \"id\": \"cmfor5r6v000lu848hnbztxt9\",\n        \"name\": \"Financial Reports\",\n        \"description\": \"Financial analytics\",\n        \"icon\": \"dollar-sign\",\n        \"url\": \"/reports/financial\",\n        \"order\": 3,\n        \"isActive\": true,\n        \"parentId\": \"cmfor5r380003u848zxopqhro\",\n        \"children\": [],\n        \"createdAt\": \"2025-09-18T01:49:11.528Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.528Z\"\n    },\n    {\n        \"id\": \"cmfor5r380003u848zxopqhro\",\n        \"name\": \"Reports\",\n        \"description\": \"Analytics and reports\",\n        \"icon\": \"chart\",\n        \"url\": \"/reports\",\n        \"order\": 4,\n        \"isActive\": true,\n        \"parentId\": null,\n        \"children\": [\n            {\n                \"id\": \"cmfor5r6b000hu848zkldyn7i\",\n                \"name\": \"User Analytics\",\n                \"description\": \"User activity reports\",\n                \"icon\": \"bar-chart\",\n                \"url\": \"/reports/users\",\n                \"order\": 1,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r380003u848zxopqhro\",\n                \"createdAt\": \"2025-09-18T01:49:11.507Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.507Z\"\n            },\n            {\n                \"id\": \"cmfor5r6o000ju848qztjtqrd\",\n                \"name\": \"System Performance\",\n                \"description\": \"System performance metrics\",\n                \"icon\": \"activity\",\n                \"url\": \"/reports/performance\",\n                \"order\": 2,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r380003u848zxopqhro\",\n                \"createdAt\": \"2025-09-18T01:49:11.521Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.521Z\"\n            },\n            {\n                \"id\": \"cmfor5r6v000lu848hnbztxt9\",\n                \"name\": \"Financial Reports\",\n                \"description\": \"Financial analytics\",\n                \"icon\": \"dollar-sign\",\n                \"url\": \"/reports/financial\",\n                \"order\": 3,\n                \"isActive\": true,\n                \"parentId\": \"cmfor5r380003u848zxopqhro\",\n                \"createdAt\": \"2025-09-18T01:49:11.528Z\",\n                \"updatedAt\": \"2025-09-18T01:49:11.528Z\"\n            }\n        ],\n        \"createdAt\": \"2025-09-18T01:49:11.396Z\",\n        \"updatedAt\": \"2025-09-18T01:49:11.396Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Submenu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Add Product\",\r\n    \"description\": \"Create new product\",\r\n    \"icon\": \"plus\",\r\n    \"url\": \"/products/add\",\r\n    \"order\": 1,\r\n    \"parentId\": \"parent-menu-id\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/menus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"menus"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Add Product\",\r\n    \"description\": \"Create new product\",\r\n    \"icon\": \"plus\",\r\n    \"url\": \"/products/add\",\r\n    \"order\": 1,\r\n    \"parentId\": \"parent-menu-id\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/menus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"menus"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "283"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11b-POLceLB5jstPGBg53CkrPKlef38\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Sep 2025 02:05:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"cmforqgzg0002u8vky6k2cqxl\",\n    \"name\": \"Add Product\",\n    \"description\": \"Create new product\",\n    \"icon\": \"plus\",\n    \"url\": \"/products/add\",\n    \"order\": 1,\n    \"isActive\": true,\n    \"parentId\": \"cmfor5r010000u8488io43320\",\n    \"children\": [],\n    \"createdAt\": \"2025-09-18T02:05:18.076Z\",\n    \"updatedAt\": \"2025-09-18T02:05:18.076Z\"\n}"
+				}
+			]
+		}
+	]
+}
