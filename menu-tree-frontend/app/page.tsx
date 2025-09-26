@@ -27,6 +27,8 @@ interface DashboardState {
   showMobileForm: boolean
 }
 
+type FormField = keyof DashboardState["formData"]
+
 export default function HomePage() {
   const [state, setState] = useState<DashboardState>({
     menus: [],
@@ -108,7 +110,7 @@ export default function HomePage() {
         parentId: menu.parentId || "",
       },
       isEditMode: true,
-      showMobileForm: true, // Show form on mobile when selecting
+      showMobileForm: true, 
     }))
   }
 
@@ -242,10 +244,16 @@ export default function HomePage() {
   }
 
   // Update form data
-  const updateFormData = (field: string, value: any) => {
+  const updateFormData = <K extends FormField>(
+    field: K,
+    value: DashboardState["formData"][K]
+  ) => {
     setState((prev) => ({
       ...prev,
-      formData: { ...prev.formData, [field]: value },
+      formData: {
+        ...prev.formData,
+        [field]: value,
+      },
     }))
   }
 
@@ -617,6 +625,15 @@ export default function HomePage() {
                     >
                       Save
                     </button>
+                    {state.isEditMode && state.selectedMenu && (
+                      <button
+                        type="button"
+                        onClick={handleDelete}
+                        className="mb-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 font-medium"
+                      >
+                        Delete Menu
+                      </button>
+                    )}
                     <Link
                       href="/dashboard"
                       className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 font-medium flex items-center justify-center"
