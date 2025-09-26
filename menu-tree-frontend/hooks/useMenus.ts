@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { menuApi } from '@/lib/api'
-import { Menu, CreateMenuRequest, UpdateMenuRequest, MoveMenuRequest, ReorderMenusRequest } from '@/types/menu'
+import { UpdateMenuRequest, MoveMenuRequest, } from '@/types/menu'
 import { toast } from 'sonner'
 
 const QUERY_KEYS = {
