@@ -23,7 +23,8 @@ export interface CreateMenuRequest {
   parentId?: string;
 }
 
-export interface UpdateMenuRequest extends Partial<CreateMenuRequest> {}
+export type UpdateMenuRequest = Partial<CreateMenuRequest>;
+
 
 export interface MoveMenuRequest {
   parentId?: string;
